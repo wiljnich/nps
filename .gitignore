@@ -1,0 +1,5 @@
+
+*.ipynb
+r_nps.Rmd
+geckodriver.log
+.ipynb_checkpoints/nps_scrape-checkpoint.py
