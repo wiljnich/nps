@@ -20,7 +20,7 @@ def get_park_names():
         park_names.append(x['FullName'])
 
 def get_park_files():
-    for park in park_names[0:2]:
+    for park in park_names:
         driver = webdriver.Firefox(firefox_profile=fp)
         driver.get("https://irma.nps.gov/NPSpecies/Search/SpeciesList")
         inputElement = driver.find_element_by_id("nps-npspecies-ux-filterparkcombobox-1011-inputEl")
