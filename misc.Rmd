@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+author: "William Nicholas"
+date: "December 2, 2019"
+output: html_document
+---
+
+
+```{r}
+park_list <- c()
+for(i in dfname$column){
+  parkdata <- get_inat_obs_project(paste0('2016-national-parks-bioblitz-',i), type='observations')
+  fn <- paste0('2016-national-parks-bioblitz-',i, '.csv')
+  write.csv(parkdata, file = fn,row.names=FALSE)
+  park_list <- c(park_list, fn)
+}
+print(park_list)
+```
+
